@@ -2,11 +2,9 @@ package db
 
 import (
 	"fmt"
-	"github.com/dgraph-io/badger/v2"
 	"github.com/segmentio/ksuid"
 	log "github.com/sirupsen/logrus"
-	"github.com/timshannon/badgerhold"
-	"github.com/winwisely268/tksh/helper"
+	"github.com/timshannon/badgerhold/v2"
 	"github.com/winwisely268/tksh/rpc"
 )
 
@@ -15,13 +13,9 @@ type Storage struct {
 	store  *badgerhold.Store
 }
 
-func createBadgerOpts(path, encKey string) badger.Options {
-	return badger.DefaultOptions(path).
-		WithEncryptionKey(helper.MD5(encKey))
-}
-
-func InitStorage(dirpath string, logger *log.Entry) (*Storage, error) {
+func InitStorage(dirpath, encryptionKey string, logger *log.Entry) (*Storage, error) {
 	options := badgerhold.DefaultOptions
+	options.EncryptionKey = []byte(encryptionKey)
 	options.Dir = dirpath
 	options.ValueDir = dirpath
 	store, err := badgerhold.Open(options)
@@ -46,7 +40,7 @@ func (s *Storage) InsertRecord(in *rpc.NewTransferRecord, bukti []byte) (*rpc.Tr
 		return nil, err
 	}
 	res := &rpc.TransferRecord{}
-	if err = s.store.Find(res, badgerhold.Where("Id").Eq(key)); err != nil {
+	if err = s.store.FindOne(res, badgerhold.Where("Id").Eq(key)); err != nil {
 		return nil, err
 	}
 	return res, nil
@@ -57,7 +51,7 @@ func (s *Storage) UpdateRecord(in *rpc.UpdateTransferRecord, bukti []byte) (*rpc
 		return nil, fmt.Errorf("key cannot be empty")
 	}
 	res := &rpc.TransferRecord{}
-	if err := s.store.Find(res, badgerhold.Where("Id").Eq(in.GetId())); err != nil {
+	if err := s.store.FindOne(res, badgerhold.Where("Id").Eq(in.GetId())); err != nil {
 		return nil, err
 	}
 	if bukti != nil && len(bukti) > 0 {
@@ -80,7 +74,7 @@ func (s *Storage) ListRecords(sortBy string) (*rpc.ReportAll, error) {
 		sortBy = "Tanggal"
 	}
 	reports := []*rpc.TransferRecord{}
-	err := s.store.Find(&reports, badgerhold.Where("1").Eq(1).SortBy(sortBy))
+	err := s.store.Find(&reports, nil)
 	if err != nil {
 		return nil, err
 	}

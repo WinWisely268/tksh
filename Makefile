@@ -65,9 +65,9 @@ fly:
 fly-create:
 	flyctl init --dockerfile --name $(APP_NAME) --org $(APP_ORG) --port $(APP_PORT) --overwrite
 	flyctl scale vm shared-cpu-1x --memory=1024 # 1GB
-	flyctl volumes create db --region ams --app $(APP_NAME)
+	flyctl volumes create tkshdata --region ams --app $(APP_NAME)
 	flyctl secrets --app $(APP_NAME) set DB_PASSWORD=$(DB_PASSWORD)
 	cp fly.template.toml fly.toml
 
 fly-nuke:
-	flyctl apps destroy $(APP_NAME)
+	flyctl apps destroy -y $(APP_NAME)

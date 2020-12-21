@@ -8,8 +8,10 @@ import (
 	"github.com/winwisely268/tksh/db"
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/h2c"
+	"google.golang.org/grpc/reflection"
 	"net"
 	"net/http"
+	"os"
 	"strings"
 
 	"github.com/winwisely268/tksh/rpc"
@@ -36,7 +38,7 @@ func main() {
 	l := log.New()
 	l.WithField("app", "tksh")
 	logger := log.NewEntry(l)
-	store, err := db.InitStorage("./data", logger)
+	store, err := db.InitStorage("./data", os.Getenv("DB_PASSWORD"), logger)
 	if err != nil {
 		logger.Fatalf("unable to create data store: %v", err)
 	}
@@ -50,6 +52,7 @@ func main() {
 		UpdateTransfer: service.UpdateTransfer,
 		GetReport:      service.GetReport,
 	})
+	reflection.Register(server)
 	grpcWebServer := registerGrpcWebServer(server)
 	handler := HttpHandler{}
 	httpServer := createHttpHandler(logger, true, handler, grpcWebServer)

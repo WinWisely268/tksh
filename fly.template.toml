@@ -1,7 +1,7 @@
 app = "kc-sentrum-2020"
 
 [mount]
-source = "db"
+source = "tkshdata"
 destination = "/app/data"
 
 [[services]]

@@ -24,6 +24,7 @@ import (
 	"google.golang.org/protobuf/types/known/timestamppb"
 	"io"
 	"io/ioutil"
+	"net/http"
 	"path/filepath"
 	"time"
 )
@@ -57,19 +58,28 @@ func (t *tkshClient) NewTransferRecord(cfg *client.Config) *cobra.Command {
 			return client.RoundTrip(cmd.Context(), cfg, func(cc grpc.ClientConnInterface, in iocodec.Decoder, out iocodec.Encoder) error {
 				cli := rpc.NewTkshServiceClient(cc)
 				tanggal := time.Unix(tgl, 0)
-				v := &rpc.NewTransferRecord{
-					Transfer:      jumlah,
-					Tanggal:       timestamppb.New(tanggal),
-					BuktiFilepath: fileName,
-				}
-
+				log.Infof("tanggal: %v", tanggal)
 				abspath, err := filepath.Abs(fileName)
 				if err != nil {
+					log.Errorf("error getting absolute path: %v", err)
 					return err
 				}
 				fileContent, err := ioutil.ReadFile(abspath)
 				if err != nil {
+					log.Errorf("cannot read file: %s", abspath)
 					return err
+				}
+				mimeType := http.DetectContentType(fileContent)
+
+				v := &rpc.NewTransferRecord{
+					Transfer:      jumlah,
+					Tanggal:       timestamppb.New(tanggal),
+					BuktiFilepath: fileName,
+					UploadRequest: &rpc.FileUploadRequest{
+						FileInfo: &rpc.FileInfo{
+							MimeType: mimeType,
+						},
+					},
 				}
 
 				stm, err := cli.NewTransfer(cmd.Context())
@@ -99,13 +109,14 @@ func (t *tkshClient) NewTransferRecord(cfg *client.Config) *cobra.Command {
 				}
 				res, err := stm.CloseAndRecv()
 				if err != nil {
+					log.Errorf("unable to close server: %v", err)
 					return err
 				}
 				return out(res)
 			})
 		},
 	}
-	cmd.PersistentFlags().StringVar(&fileName, cfg.FlagNamer("FilePath"), "newuploadbootstrap.png", "png / jpg path")
+	cmd.PersistentFlags().StringVar(&fileName, cfg.FlagNamer("File"), "newuploadbootstrap.png", "png / jpg path")
 	cmd.PersistentFlags().Float64Var(&jumlah, cfg.FlagNamer("Jumlah"), 0.0, "jumlah transfer")
 	cmd.PersistentFlags().Int64Var(&tgl, cfg.FlagNamer("Tgl"), 1608537273, "tanggal transfer dalam unix second format")
 	return cmd
@@ -224,8 +235,8 @@ func main() {
 	clientOptions := []client.Option{
 		srvCfg, jsonCfg, caCfg,
 	}
-	helloClient := NewCLI(clientOptions...)
-	if err := helloClient.Execute(); err != nil {
+	cliCmd := NewCLI(clientOptions...)
+	if err := cliCmd.Execute(); err != nil {
 		log.Fatal(err)
 	}
 }
@@ -250,7 +261,8 @@ func getRemoteCACert(domain string) error {
 	conf := &tls.Config{
 		InsecureSkipVerify: true,
 	}
-	conn, err := tls.Dial("tcp", fmt.Sprintf("%s:443", domain), conf)
+	log.Printf(domain)
+	conn, err := tls.Dial("tcp", domain, conf)
 	if err != nil {
 		return err
 	}
