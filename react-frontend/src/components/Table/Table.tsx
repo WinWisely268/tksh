@@ -36,7 +36,7 @@ import {
   camelToWords,
   useDebounce,
   useLocalStorage
-} from '../../../shared/utilities'
+} from '../../shared/utilities'
 import { DumpInstance } from './DebugDump'
 import { FilterChipBar } from './FilterChipBar'
 import { fuzzyTextFilter, numericTextFilter } from './filters'

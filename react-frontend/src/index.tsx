@@ -1,7 +1,6 @@
 import React, {Suspense} from 'react'
 import ReactDOM from 'react-dom'
 import {BrowserRouter} from 'react-router-dom'
-import './index.css'
 import App from './app/App'
 import reportWebVitals from './reportWebVitals'
 import {CircularProgress} from '@material-ui/core'
