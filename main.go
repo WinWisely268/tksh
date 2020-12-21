@@ -10,7 +10,6 @@ import (
 	"golang.org/x/net/http2/h2c"
 	"net"
 	"net/http"
-	"os"
 	"strings"
 
 	"github.com/winwisely268/tksh/rpc"
@@ -37,7 +36,7 @@ func main() {
 	l := log.New()
 	l.WithField("app", "tksh")
 	logger := log.NewEntry(l)
-	store, err := db.InitStorage("data", os.Getenv("DB_PASSWORD"), logger)
+	store, err := db.InitStorage("./data", logger)
 	if err != nil {
 		logger.Fatalf("unable to create data store: %v", err)
 	}

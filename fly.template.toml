@@ -1,19 +1,21 @@
+app = "kc-sentrum-2020"
 
-[build]
-  builder = "gcr.io/paketo-buildpacks/builder:tiny"
+[mount]
+source = "db"
+destination = "/app/data"
 
 [[services]]
-  internal_port = 54321
-  protocol = "tcp"
+internal_port = 8080
+protocol = "tcp"
 
-  [services.concurrency]
-    hard_limit = 25
-    soft_limit = 20
+[services.concurrency]
+hard_limit = 25
+soft_limit = 20
 
-  [[services.ports]]
-    handlers = ["tls"]
-    port = "443"
+[[services.ports]]
+handlers = ["tls"]
+port = "443"
 
-  [[services.tcp_checks]]
-    interval = 10000
-    timeout = 2000
+[[services.tcp_checks]]
+interval = 10000
+timeout = 2000

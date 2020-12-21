@@ -20,14 +20,10 @@ func createBadgerOpts(path, encKey string) badger.Options {
 		WithEncryptionKey(helper.MD5(encKey))
 }
 
-func InitStorage(dirpath, encKey string, logger *log.Entry) (*Storage, error) {
+func InitStorage(dirpath string, logger *log.Entry) (*Storage, error) {
 	options := badgerhold.DefaultOptions
-	ex, _ := helper.PathExists(dirpath)
-	if !ex {
-		helper.CreateDir(dirpath)
-	}
-	options.WithDir(dirpath)
-	options.WithValueDir(dirpath)
+	options.Dir = dirpath
+	options.ValueDir = dirpath
 	store, err := badgerhold.Open(options)
 	if err != nil {
 		return nil, err
