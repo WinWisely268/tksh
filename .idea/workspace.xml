@@ -2,12 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="039d8b09-3fdb-472f-b0ad-5ccc89e326ee" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/app/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/app/AppFooter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/app/AppHeader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/app/AppHomeLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/app/AppLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/app/AppThemer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/app/DashboardBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/app/DashboardLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/app/Home.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Loader/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Snackbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/ColumnHidePage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/DebugDump.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/FilterChipBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/FilterPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/ResizeHandle.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/Table.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/TablePagination.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/TableStyles.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/TableToolbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/TooltipCell.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/filters/fuzzyFilter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/filters/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/filters/numericFilter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/tableHookUtils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/service-worker.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/shared/hooks/GetReports.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/shared/service/client.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/client/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fly.template.toml" beforeDir="false" afterPath="$PROJECT_DIR$/fly.template.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fly.toml" beforeDir="false" afterPath="$PROJECT_DIR$/fly.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/config/env.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/config/env.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/ios/Flutter/Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ios/Flutter/Debug.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/ios/Flutter/Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ios/Flutter/Release.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/lib/rpc/tksh.pbgrpc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/lib/rpc/tksh.pbgrpc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generate.go" beforeDir="false" afterPath="$PROJECT_DIR$/generate.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/handlers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc/tksh.cobra.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/rpc/tksh.cobra.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc/tksh.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/rpc/tksh.pb.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +55,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file:///usr/lib/go" />
+  <component name="GOROOT" url="file:///usr/local/Cellar/go/1.15.6/libexec" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -43,9 +77,10 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/react-frontend/node_modules/typescript/lib" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
@@ -69,13 +104,9 @@
       <setting name="fixLineNumbers" value="false" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
-      <module name="tksh" />
-      <working_directory value="$PROJECT_DIR$" />
-      <go_parameters value="-i" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$" />
-      <directory value="$PROJECT_DIR$" />
+    <configuration default="true" type="OPA_RUN_CONFIGURATION" factoryName="Opa configuration factory">
+      <option name="query" value="" />
+      <option name="addtionalargs" value="" />
       <method v="2" />
     </configuration>
     <configuration name="go build github.com/winwisely268/tksh" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -85,21 +116,6 @@
       <filePath value="$PROJECT_DIR$/main.go" />
       <package value="github.com/winwisely268/tksh" />
       <directory value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="tksh" />
-      <working_directory value="$PROJECT_DIR$" />
-      <go_parameters value="-i" />
-      <framework value="gotest" />
-      <kind value="DIRECTORY" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="OPA_RUN_CONFIGURATION" factoryName="Opa configuration factory">
-      <option name="query" value="" />
-      <option name="addtionalargs" value="" />
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -125,21 +141,5 @@
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/handlers.go</url>
-          <line>42</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/handlers.go</url>
-          <line>33</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

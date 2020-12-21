@@ -6,8 +6,6 @@ import (
 	"fmt"
 	"github.com/disintegration/imaging"
 	log "github.com/sirupsen/logrus"
-	"github.com/winwisely268/tksh/db"
-	"github.com/winwisely268/tksh/rpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	"image"
@@ -17,6 +15,9 @@ import (
 	"net/http"
 	"path/filepath"
 	"strings"
+
+	"github.com/winwisely268/tksh/db"
+	"github.com/winwisely268/tksh/rpc"
 )
 
 const (

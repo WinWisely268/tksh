@@ -15,3 +15,9 @@ package main
 //go:generate /usr/bin/env bash -c "echo 'generating protobuf and grpc services for flutter/dart'"
 //go:generate protoc -I. --dart_out=grpc:./frontend/lib/rpc/ ./tksh.proto
 //go:generate protoc -I. --dart_out=./frontend/lib/rpc/ google/protobuf/timestamp.proto
+
+// ============================================================================
+// Typescript / JS
+// ============================================================================
+//go:generate /usr/bin/env bash -c "echo 'generating protobuf and grpc service for typescript'"
+//go:generate protoc -I. -I./react-frontend/node_modules ./tksh.proto --js_out=import_style=commonjs,binary:./react-frontend/src/rpc --grpc-web_out=import_style=typescript,mode=grpcwebtext:./react-frontend/src/rpc
