@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+option go_package = "github.com/winwisely268/tksh/rpc";
+
+import "google/protobuf/timestamp.proto";
+
+message FileUploadRequest {
+  FileInfo file_info = 1;
+  bytes chunk = 2;
+}
+
+message FileInfo {
+  string mime_type = 1;
+}
+
+message NewTransferRecord {
+  google.protobuf.Timestamp tanggal = 1;
+  double transfer = 2;
+  string bukti_filepath = 3;
+  FileUploadRequest upload_request = 4;
+}
+
+message UpdateTransferRecord {
+  string id = 1;
+  double transfer = 2;
+  string bukti_filepath = 3;
+  FileUploadRequest upload_request = 4;
+}
+
+message TransferRecord {
+  // @inject_tag: badgerholdIndex:"Id"
+  string id = 1;
+  google.protobuf.Timestamp tanggal = 2;
+  double transfer = 3;
+  bytes bukti = 4;
+}
+
+message ReportAll {
+  repeated TransferRecord report_items = 1;
+}
+
+message ReportRequest {
+  string sort_by = 1;
+}
+
+service TkshService {
+  // hide
+  rpc NewTransfer(stream NewTransferRecord) returns (TransferRecord);
+  // hide
+  rpc UpdateTransfer(stream UpdateTransferRecord) returns (TransferRecord);
+  rpc GetReport(ReportRequest) returns (ReportAll);
+}
