@@ -33,7 +33,7 @@ const (
 	chunkSize = 1 << 20 // chunk to 1MB
 
 	errUpload = "cannot upload file: %s, reason: %v"
-	addr      = "sentrum.fly.dev:443"
+	addr      = "perbaikankaca.fly.dev:443"
 )
 
 type tkshClient struct{}

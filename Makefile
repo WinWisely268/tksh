@@ -4,7 +4,7 @@ OUTPUT_DIR = bin-all
 
 DB_PASSWORD = $(shell echo "$$DB_PASSWORD" | tr -d '\n')
 
-APP_NAME = sentrum
+APP_NAME = perbaikankaca
 APP_ORG = personal
 APP_PORT = 8080
 
