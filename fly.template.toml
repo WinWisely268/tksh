@@ -1,4 +1,4 @@
-app = "kc-sentrum-2020"
+app = "sentrum"
 
 [mount]
 source = "tkshdata"

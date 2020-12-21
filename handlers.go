@@ -36,6 +36,7 @@ func (t *tkshService) NewTransfer(stream rpc.TkshService_NewTransferServer) erro
 		return status.Errorf(codes.InvalidArgument, "cannot upload file: %v", err)
 	}
 	var bukti []byte
+	initialReq := req
 	fileBuf := bytes.Buffer{}
 	fileSize := 0
 	for {
@@ -58,7 +59,10 @@ func (t *tkshService) NewTransfer(stream rpc.TkshService_NewTransferServer) erro
 		}
 	}
 	bukti, err = imgEncode("", fileBuf.Bytes())
-	tr, err := t.store.InsertRecord(req, bukti)
+	if err != nil {
+		return err
+	}
+	tr, err := t.store.InsertRecord(initialReq, bukti)
 	if err != nil {
 		return err
 	}
@@ -82,6 +86,7 @@ func (t *tkshService) UpdateTransfer(stream rpc.TkshService_UpdateTransferServer
 	if err != nil {
 		return status.Errorf(codes.InvalidArgument, "cannot upload file: %v", err)
 	}
+	initialReq := req
 	var bukti []byte
 	if req.GetUploadRequest().GetChunk() != nil && len(req.GetUploadRequest().GetChunk()) > 0 {
 		fileBuf := bytes.Buffer{}
@@ -111,7 +116,7 @@ func (t *tkshService) UpdateTransfer(stream rpc.TkshService_UpdateTransferServer
 		}
 		bukti = b
 	}
-	tr, err := t.store.UpdateRecord(req, bukti)
+	tr, err := t.store.UpdateRecord(initialReq, bukti)
 	if err != nil {
 		return err
 	}

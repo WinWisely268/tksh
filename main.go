@@ -23,11 +23,27 @@ const (
 	flyHeaders         = "Fly-Client-IP, Fly-Forwarded-Port, Fly-Region, Via, X-Forwarded-For, X-Forwarded-Proto, X-Forwarded-SSL, X-Forwarded-Port"
 )
 
-// create a handler struct
-type HttpHandler struct{} // implement `ServeHTTP` method on `HttpHandler` struct
-func (h HttpHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) { // create response binary data
-	data := []byte("Hello World!") // slice of bytes    // write `data` to response
-	_, _ = w.Write(data)
+type FileSystem struct {
+	fs http.FileSystem
+}
+
+// Open opens file
+func (mfs FileSystem) Open(path string) (http.File, error) {
+	f, err := mfs.fs.Open(path)
+	if err != nil {
+		return nil, err
+	}
+
+	s, _ := f.Stat()
+
+	if s.IsDir() {
+		index := strings.TrimSuffix(path, "/") + "/index.html"
+		if _, err := mfs.fs.Open(index); err != nil {
+			return nil, err
+		}
+	}
+
+	return f, nil
 }
 
 func main() {
@@ -54,8 +70,8 @@ func main() {
 	})
 	reflection.Register(server)
 	grpcWebServer := registerGrpcWebServer(server)
-	handler := HttpHandler{}
-	httpServer := createHttpHandler(logger, true, handler, grpcWebServer)
+	fileServer := http.FileServer(AssetFile())
+	httpServer := createHttpHandler(logger, true, fileServer, grpcWebServer)
 
 	log.Fatal(httpServer.Serve(listener))
 }
@@ -68,7 +84,7 @@ func createHttpHandler(logger *log.Entry, isGzipped bool, fileServer http.Handle
 			w.Header().Set("Access-Control-Allow-Headers", fmt.Sprintf("%s,%s", defaultCorsHeaders, flyHeaders))
 			logger.Printf("Serving Endpoint: %s", r.URL.Path)
 			ct := r.Header.Get("content-type")
-			if r.ProtoMajor == 2 && (strings.Contains(ct, "application/grpc") || strings.Contains(ct, "application/grpc-web")) {
+			if (r.ProtoMajor == 2 && strings.Contains(ct, "application/grpc")) || strings.Contains(r.URL.String(), "TkshService") {
 				grpcWebServer.ServeHTTP(w, r)
 			} else {
 				if isGzipped {

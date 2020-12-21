@@ -3,3 +3,4 @@ tags
 data
 bin-all
 assets
+/assets.go

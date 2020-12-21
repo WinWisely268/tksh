@@ -16,8 +16,7 @@ class DashboardView extends StatelessWidget {
         return Scaffold(
           appBar: AppBar(
             automaticallyImplyLeading: true,
-            title: Text(
-                'Laporan Kaca Sentrum ${DateTime.now().toIso8601String()}'),
+            title: Text('Laporan Kaca Sentrum ${model.getDateTimeNow()}'),
             centerTitle: true,
           ),
           body: model.isLoading
@@ -45,10 +44,12 @@ class DashboardView extends StatelessWidget {
                             // selected: item.selected,
                             // onSelectChanged: (bool value) {},
                             cells: <DataCell>[
-                              DataCell(Text('${item.tanggal}')),
+                              DataCell(
+                                  Text('${model.getDateTime(item.tanggal)}')),
                               DataCell(Text('${item.transfer}')),
                             ]);
                       },
+                      alwaysShowDataTable: true,
                       header: Text(
                           'Total Saldo: Rp. ${model.getTotalSaldo().toString()}'),
                       // sortColumnIndex: _sortColumnIndex,

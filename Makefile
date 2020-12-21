@@ -4,7 +4,7 @@ OUTPUT_DIR = bin-all
 
 DB_PASSWORD = $(shell echo "$$DB_PASSWORD" | tr -d '\n')
 
-APP_NAME = kc-sentrum-2020
+APP_NAME = sentrum
 APP_ORG = personal
 APP_PORT = 8080
 
@@ -18,14 +18,23 @@ IMAGE_EXECUTABLE = server
 IMAGE_REF = $(shell git rev-parse HEAD)
 IMAGE_FLAGS = ""
 
+EMBED_OUTPUT_DIR = embed
+FRONTEND_PREFIX = frontend/build/
+FRONTEND_WEB_PREFIX = $(FRONTEND_PREFIX)web/
+FRONTEND_ABS_PREFIX = $(PWD)/$(FRONTEND_WEB_PREFIX)
+
 .PHONY: all
 
 all: gen build-clean build
 
 gen:
 	@go generate
+	cd frontend && flutter build web
 
-build:
+embed-frontend:
+	go-bindata -fs -nomemcopy -o assets.go -prefix "$(FRONTEND_WEB_PREFIX)" $(FRONTEND_ABS_PREFIX)...
+
+build: embed-frontend
 	$(GO_LDFLAGS) -o $(OUTPUT_DIR)/server .
 	$(GO_LDFLAGS) -o $(OUTPUT_DIR)/client client/main.go
 
@@ -65,7 +74,7 @@ fly:
 fly-create:
 	flyctl init --dockerfile --name $(APP_NAME) --org $(APP_ORG) --port $(APP_PORT) --overwrite
 	flyctl scale vm shared-cpu-1x --memory=1024 # 1GB
-	flyctl volumes create tkshdata --region ams --app $(APP_NAME)
+	flyctl volumes create tkshdata --region sin --app $(APP_NAME)
 	flyctl secrets --app $(APP_NAME) set DB_PASSWORD=$(DB_PASSWORD)
 	cp fly.template.toml fly.toml
 

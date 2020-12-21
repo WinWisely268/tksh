@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:kacasentrum/modules/repo/tksh_repo.dart';
+import 'package:kacasentrum/rpc/google/protobuf/timestamp.pb.dart';
 import 'package:kacasentrum/rpc/tksh.pbgrpc.dart' as rpc;
 import 'package:kacasentrum/shared/widgets/notify.dart';
 
@@ -54,12 +56,11 @@ class DashboardViewModel extends ChangeNotifier {
     _setLoading(true);
     try {
       final resp = await TkshRepo.getReport(sortBy: 'Tanggal');
-      if (resp != null && resp.reportItems?.length > 0) {
-        _reportAll = resp;
-        _setTotalCount(_reportAll.reportItems.length);
-        _transferRecordList = _reportAll.reportItems;
-        notifyListeners();
-      }
+      _reportAll = resp;
+      _setTotalCount(_reportAll.reportItems.length);
+      _transferRecordList = _reportAll.reportItems;
+      print("$_transferRecordList");
+      notifyListeners();
     } catch (e) {
       _setHasError(true);
       _setErrMsg(e.toString());
@@ -77,5 +78,18 @@ class DashboardViewModel extends ChangeNotifier {
     });
     notifyListeners();
     return _total;
+  }
+
+  String getDateTimeNow() {
+    return getFormattedDate(DateTime.now());
+  }
+
+  String getFormattedDate(DateTime dt) {
+    final f = new DateFormat('dd-MM-yyyy hh:mm');
+    return f.format(dt);
+  }
+
+  String getDateTime(Timestamp ts) {
+    return getFormattedDate(ts.toDateTime());
   }
 }

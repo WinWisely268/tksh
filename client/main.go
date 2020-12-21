@@ -33,7 +33,7 @@ const (
 	chunkSize = 1 << 20 // chunk to 1MB
 
 	errUpload = "cannot upload file: %s, reason: %v"
-	addr      = "kc-sentrum-2020.fly.dev:443"
+	addr      = "sentrum.fly.dev:443"
 )
 
 type tkshClient struct{}
@@ -235,6 +235,9 @@ func main() {
 	clientOptions := []client.Option{
 		srvCfg, jsonCfg, caCfg,
 	}
+	// clientOptions := []client.Option{
+	// 	srvCfg, jsonCfg,
+	// }
 	cliCmd := NewCLI(clientOptions...)
 	if err := cliCmd.Execute(); err != nil {
 		log.Fatal(err)
@@ -270,12 +273,6 @@ func getRemoteCACert(domain string) error {
 	certs := conn.ConnectionState().PeerCertificates
 	for _, cert := range certs {
 		if cert.IsCA {
-			// certPool := x509.NewCertPool()
-			// certPool.AddCert(cert)
-			// config := &tls.Config{
-			// 	RootCAs: certPool,
-			// }
-			// return credentials.NewTLS(config), nil
 			publicKeyBlock := pem.Block{
 				Type:  "CERTIFICATE",
 				Bytes: cert.Raw,
