@@ -47,7 +47,6 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ title, children }) => {
         <Container className={classes.main} maxWidth='sm'>
           {children}
         </Container>
-        <Footer />
       </div>
     </Themer>
   )

@@ -30,6 +30,7 @@ all: gen build-clean build
 gen:
 	@go generate
 	cd frontend && flutter build web
+	#cd pwa-frontend && yarn run build
 
 embed-frontend:
 	go-bindata -fs -nomemcopy -o assets.go -prefix "$(FRONTEND_WEB_PREFIX)" $(FRONTEND_ABS_PREFIX)...
