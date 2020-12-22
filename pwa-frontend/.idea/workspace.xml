@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef481c22-e501-4455-8388-cfb357a38f7e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/SWWrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/DashboardBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/DashboardBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SWWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SWWrapper.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +56,7 @@
       <workItem from="1608627810890" duration="2000" />
       <workItem from="1608647858305" duration="81000" />
       <workItem from="1608647950873" duration="578000" />
-      <workItem from="1608653644051" duration="591000" />
+      <workItem from="1608653644051" duration="728000" />
     </task>
     <servers />
   </component>

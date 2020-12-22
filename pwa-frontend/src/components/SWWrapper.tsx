@@ -18,7 +18,7 @@ const ServiceWorkerWrapper: FC = () => {
   const reloadPage = () => {
     installingWorker?.postMessage({ type: 'SKIP_WAITING' });
     setShowReload(false);
-    window.location.reload();
+    window.location.reload(true);
   };
 
   return (
