@@ -72,7 +72,7 @@ const DashboardBar: React.FunctionComponent<DashboardBarProps> = ({
         </Toolbar>
       </AppBar>
       <Drawer
-        variant='permanent'
+        variant='temporary'
         classes={{
           paper: cx(classes.drawerPaper, !open && classes.drawerPaperClose)
         }}

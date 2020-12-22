@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kacasentrum/modules/view/dashboard_view.dart';
+import 'package:perbaikankaca/modules/view/dashboard_view.dart';
 
 void main() {
   runApp(MyApp());

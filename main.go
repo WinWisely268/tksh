@@ -8,7 +8,7 @@ import (
 	"github.com/winwisely268/tksh/db"
 	"golang.org/x/net/http2"
 	"golang.org/x/net/http2/h2c"
-	"google.golang.org/grpc/reflection"
+// 	"google.golang.org/grpc/reflection"
 	"net"
 	"net/http"
 	"os"
@@ -68,7 +68,7 @@ func main() {
 		UpdateTransfer: service.UpdateTransfer,
 		GetReport:      service.GetReport,
 	})
-	reflection.Register(server)
+// 	reflection.RegisterServer(server)
 	grpcWebServer := registerGrpcWebServer(server)
 	fileServer := http.FileServer(AssetFile())
 	httpServer := createHttpHandler(logger, true, fileServer, grpcWebServer)
@@ -83,17 +83,13 @@ func createHttpHandler(logger *log.Entry, isGzipped bool, fileServer http.Handle
 			w.Header().Set("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
 			w.Header().Set("Access-Control-Allow-Headers", fmt.Sprintf("%s,%s", defaultCorsHeaders, flyHeaders))
 			logger.Printf("Serving Endpoint: %s", r.URL.Path)
-			// ct := r.Header.Get("content-type")
-			// if (r.ProtoMajor == 2 && strings.Contains(ct, "application/grpc")) || strings.Contains(r.URL.String(), "TkshService") {
-			if grpcWebServer.IsAcceptableGrpcCorsRequest(r) || grpcWebServer.IsGrpcWebRequest(r) || grpcWebServer.IsGrpcWebSocketRequest(r) {
+			ct := r.Header.Get("content-type")
+			if (r.ProtoMajor == 2 && strings.Contains(ct, "application/grpc")) || strings.Contains(r.URL.String(), "TkshService") {
+// 			if grpcWebServer.IsAcceptableGrpcCorsRequest(r) && (grpcWebServer.IsGrpcWebRequest(r) || grpcWebServer.IsGrpcWebSocketRequest(r)) {
 				grpcWebServer.ServeHTTP(w, r)
 			} else {
-				if isGzipped {
-					fileServer = gziphandler.GzipHandler(fileServer)
-					fileServer.ServeHTTP(w, r)
-				} else {
-					fileServer.ServeHTTP(w, r)
-				}
+				fileServer = gziphandler.GzipHandler(fileServer)
+				fileServer.ServeHTTP(w, r)
 			}
 		}), &http2.Server{}),
 	}

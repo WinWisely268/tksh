@@ -4,9 +4,40 @@
     <list default="true" id="ef481c22-e501-4455-8388-cfb357a38f7e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/android/app/src/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/android/app/src/main/kotlin/com/example/kacasentrum/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/android/app/src/main/kotlin/com/example/kacasentrum/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/android/app/src/profile/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/android/app/src/profile/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/integration_test/app_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/integration_test/app_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/ios/Runner/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/lib/modules/repo/tksh_repo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/lib/modules/repo/tksh_repo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/lib/modules/view/dashboard_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/lib/modules/view/dashboard_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/lib/modules/view_model/dashboard_view_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/lib/modules/view_model/dashboard_view_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/lib/rpc/tksh.pbgrpc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/lib/rpc/tksh.pbgrpc.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/lib/shared/repo/repo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/lib/shared/repo/repo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/test/widget_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/web/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/web/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/AppFooter.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/AppHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AppHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/AppHomeLayout.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/AppLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AppLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/DashboardBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/DashboardBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/DashboardLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/DashboardLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rpc/tksh_pb.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/rpc/tksh_pb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rpc/tksh.cobra.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/../rpc/tksh.cobra.pb.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rpc/tksh.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/../rpc/tksh.pb.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,11 +57,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="js.linters.configure.manually.selectedeslint" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/.config/nvm/14.15.3/bin/node" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_interpreter_path" value="$USER_HOME$/.config/nvm/14.15.3/bin/node" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -51,6 +88,8 @@
       <workItem from="1608624860517" duration="1957000" />
       <workItem from="1608627399831" duration="404000" />
       <workItem from="1608627810890" duration="2000" />
+      <workItem from="1608647858305" duration="81000" />
+      <workItem from="1608647950873" duration="578000" />
     </task>
     <servers />
   </component>
@@ -68,5 +107,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

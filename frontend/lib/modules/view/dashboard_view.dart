@@ -1,8 +1,8 @@
 import 'package:data_tables/data_tables.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
-import 'package:kacasentrum/modules/view_model/dashboard_view_model.dart';
-import 'package:kacasentrum/rpc/tksh.pbgrpc.dart' as rpc;
+import 'package:perbaikankaca/modules/view_model/dashboard_view_model.dart';
+import 'package:perbaikankaca/rpc/tksh.pbgrpc.dart' as rpc;
 
 class DashboardView extends StatelessWidget {
   @override

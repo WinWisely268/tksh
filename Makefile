@@ -1,5 +1,6 @@
 VERSION_GITHASH = $(shell git rev-parse HEAD)
 GO_LDFLAGS = CGO_ENABLED=0 go build -ldflags "-X main.build=${VERSION_GITHASH}" -a -tags netgo
+GO_CROSS = GOOS=linux GOARCH=amd64
 OUTPUT_DIR = bin-all
 
 DB_PASSWORD = $(shell echo "$$DB_PASSWORD" | tr -d '\n')
@@ -19,8 +20,8 @@ IMAGE_REF = $(shell git rev-parse HEAD)
 IMAGE_FLAGS = ""
 
 EMBED_OUTPUT_DIR = embed
-FRONTEND_PREFIX = frontend/build/
-FRONTEND_WEB_PREFIX = $(FRONTEND_PREFIX)web/
+FRONTEND_PREFIX = pwa-frontend/build/
+FRONTEND_WEB_PREFIX = $(FRONTEND_PREFIX)
 FRONTEND_ABS_PREFIX = $(PWD)/$(FRONTEND_WEB_PREFIX)
 
 .PHONY: all
@@ -29,14 +30,14 @@ all: gen build-clean build
 
 gen:
 	@go generate
-	cd frontend && flutter build web
-	#cd pwa-frontend && yarn run build
+# 	cd frontend && flutter build web
+	cd pwa-frontend && yarn run build
 
 embed-frontend:
 	go-bindata -fs -nomemcopy -o assets.go -prefix "$(FRONTEND_WEB_PREFIX)" $(FRONTEND_ABS_PREFIX)...
 
 build: embed-frontend
-	$(GO_LDFLAGS) -o $(OUTPUT_DIR)/server .
+	$(GO_CROSS) $(GO_LDFLAGS) -o $(OUTPUT_DIR)/server .
 	$(GO_LDFLAGS) -o $(OUTPUT_DIR)/client client/main.go
 
 build-clean:

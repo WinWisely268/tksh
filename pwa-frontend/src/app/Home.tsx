@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Grid } from '@material-ui/core'
+import {CircularProgress, Grid} from '@material-ui/core'
 import DashboardLayout from './DashboardLayout'
 import { Table } from '../components/Table'
 import SnackBar from '../components/Snackbar'
@@ -49,16 +49,15 @@ function formatMoney(
 }
 
 const Dashboard: React.FunctionComponent<DashboardTableProps> = () => {
-  useEffect(() => {
-    document.title = 'Laporan Perbaikan Kaca'
-  }, [])
   const [errMsg, setErrMsg] = useState('')
+  const [isLoading, setLoading] = useState<boolean>(false)
   const [allReports, setAllReports] = useState<TransferRecord[] | undefined>(
     undefined
   )
   useEffect(() => {
     ;(async () => {
       try {
+        setLoading(true)
         const reportReq = new ReportRequest()
         reportReq.setSortBy('Tanggal')
         const allRecords = await grpcClient.serviceClient.getReport(
@@ -66,11 +65,13 @@ const Dashboard: React.FunctionComponent<DashboardTableProps> = () => {
           {}
         )
         setAllReports(allRecords.getReportItemsList())
+        setLoading(false)
       } catch (e) {
-        setErrMsg(e.valueOf().toString())
+        setLoading(false)
+        setErrMsg('tidak bisa mengambil data transfer')
       }
     })()
-  }, [])
+  }, [allReports])
 
   const columns = [
     {
@@ -88,7 +89,7 @@ const Dashboard: React.FunctionComponent<DashboardTableProps> = () => {
   function mapListDataRow(): any[] {
     let transferRecord: any[] = []
     if (allReports !== undefined && allReports !== null) {
-      allReports.map((rep) => {
+      allReports.forEach((rep) => {
         transferRecord.push({
           tanggal: formatDate(rep.getTanggal()?.toDate().toISOString()!),
           jumlah: formatMoney(rep.getTransfer(), 2, ',', '.')
@@ -109,13 +110,22 @@ const Dashboard: React.FunctionComponent<DashboardTableProps> = () => {
     return formatMoney(totalSaldo, 2, ',', '.')
   }
 
+  if (isLoading && allReports === undefined) {
+    return (
+        <React.Fragment>
+          <div style={{display: 'flex', justifyContent: 'center'}}>
+            <CircularProgress/>
+          </div>
+        </React.Fragment>
+    )
+  }
   if (errMsg !== '') {
     return (
       <React.Fragment>
         <SnackBar
           variant='error'
           message={errMsg}
-          setMessage={(message) => setErrMsg(errMsg)}
+          setMessage={(message) => setErrMsg(message)}
         />
       </React.Fragment>
     )

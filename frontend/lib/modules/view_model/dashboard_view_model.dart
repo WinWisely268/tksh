@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:kacasentrum/modules/repo/tksh_repo.dart';
-import 'package:kacasentrum/rpc/google/protobuf/timestamp.pb.dart';
-import 'package:kacasentrum/rpc/tksh.pbgrpc.dart' as rpc;
-import 'package:kacasentrum/shared/widgets/notify.dart';
+import 'package:perbaikankaca/modules/repo/tksh_repo.dart';
+import 'package:perbaikankaca/rpc/google/protobuf/timestamp.pb.dart';
+import 'package:perbaikankaca/rpc/tksh.pbgrpc.dart' as rpc;
+import 'package:perbaikankaca/shared/widgets/notify.dart';
 
 class DashboardViewModel extends ChangeNotifier {
   int _totalCount = 0;

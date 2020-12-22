@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React from 'react'
 import {useHistory} from 'react-router-dom'
 import {
     useTheme,
@@ -7,7 +7,7 @@ import {
     Theme,
 } from '@material-ui/core/styles'
 
-import {Toolbar, AppBar, IconButton, Button} from '@material-ui/core'
+import {Toolbar, AppBar, IconButton} from '@material-ui/core'
 import HomeIcon from '@material-ui/icons/Home'
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -39,7 +39,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
                     color="inherit"
                     aria-label="home"
                 >
-                    <HomeIcon color="action"/>
+                    {/*<HomeIcon color="action"/>*/}
                 </IconButton>
                 <div className={classes.spacer}/>
             </Toolbar>

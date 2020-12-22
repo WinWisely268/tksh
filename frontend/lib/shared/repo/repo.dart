@@ -2,7 +2,7 @@ import 'dart:convert' show json;
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:grpc/grpc_web.dart';
 import 'package:grpc/grpc.dart';
-import 'package:kacasentrum/config/host_config.dart';
+import 'package:perbaikankaca/config/host_config.dart';
 
 class BaseRepo {
   static final String hostConfigPath = "config/env.json";

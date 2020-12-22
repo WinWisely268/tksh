@@ -29,28 +29,28 @@ class TkshServiceClient extends $grpc.Client {
       ($0.ReportRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.ReportAll.fromBuffer(value));
 
-  TkshServiceClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  TkshServiceClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions options,
+      $core.Iterable<$grpc.ClientInterceptor> interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$0.TransferRecord> newTransfer(
       $async.Stream<$0.NewTransferRecord> request,
       {$grpc.CallOptions options}) {
-    final call = $createCall(_$newTransfer, request, options: options);
-    return $grpc.ResponseFuture(call);
+    return $createStreamingCall(_$newTransfer, request, options: options)
+        .single;
   }
 
   $grpc.ResponseFuture<$0.TransferRecord> updateTransfer(
       $async.Stream<$0.UpdateTransferRecord> request,
       {$grpc.CallOptions options}) {
-    final call = $createCall(_$updateTransfer, request, options: options);
-    return $grpc.ResponseFuture(call);
+    return $createStreamingCall(_$updateTransfer, request, options: options)
+        .single;
   }
 
   $grpc.ResponseFuture<$0.ReportAll> getReport($0.ReportRequest request,
       {$grpc.CallOptions options}) {
-    final call = $createCall(_$getReport, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+    return $createUnaryCall(_$getReport, request, options: options);
   }
 }
 

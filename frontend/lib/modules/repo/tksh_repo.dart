@@ -1,7 +1,7 @@
 import 'package:file_picker/file_picker.dart';
-import 'package:kacasentrum/rpc/google/protobuf/timestamp.pb.dart';
-import 'package:kacasentrum/shared/repo/repo.dart';
-import 'package:kacasentrum/rpc/tksh.pbgrpc.dart' as rpc;
+import 'package:perbaikankaca/rpc/google/protobuf/timestamp.pb.dart';
+import 'package:perbaikankaca/shared/repo/repo.dart';
+import 'package:perbaikankaca/rpc/tksh.pbgrpc.dart' as rpc;
 import 'package:meta/meta.dart';
 
 class TkshRepo {

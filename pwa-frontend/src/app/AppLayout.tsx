@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 
 import Themer from './AppThemer'
-import Footer from './AppFooter'
 import Header from './AppHeader'
 
 import CssBaseline from '@material-ui/core/CssBaseline'

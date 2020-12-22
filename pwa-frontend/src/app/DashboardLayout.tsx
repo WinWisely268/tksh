@@ -8,7 +8,6 @@ import {
     makeStyles,
     Theme
 } from '@material-ui/core/styles'
-import Footer from "./AppFooter";
 
 const drawerWidth = 240
 
@@ -131,12 +130,9 @@ const DashboardLayout: React.FunctionComponent<DashboardLayoutProps> = ({childre
             />
             <main className={classes.content}>
                 <div className={classes.appBarSpacer}>
-                    <Container maxWidth='xl' className={classes.container}>
                         {children}
-                    </Container>
                 </div>
             </main>
-            <Footer />
         </div>
     )
 }
