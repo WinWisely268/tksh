@@ -324,7 +324,7 @@ export function Table<T extends object>(
         </div>
       </div>
       <TablePagination<T> instance={instance} />
-      <DumpInstance enabled instance={instance} />
+      {/*<DumpInstance enabled instance={instance} />*/}
     </>
   )
 }

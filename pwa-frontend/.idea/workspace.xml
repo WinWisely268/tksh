@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef481c22-e501-4455-8388-cfb357a38f7e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/AppHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/AppHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/AppLayout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/DashboardBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/DashboardBar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/DashboardLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/DashboardLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Snackbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Snackbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Table/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Table/Table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/hooks/GetReports.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/utilities/object.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/utilities/object.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/utilities/splitInitial.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/utilities/splitInitial.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/utilities/validators.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/utilities/validators.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +59,7 @@
       <workItem from="1608647858305" duration="81000" />
       <workItem from="1608647950873" duration="578000" />
       <workItem from="1608653644051" duration="899000" />
-      <workItem from="1608658302044" duration="818000" />
+      <workItem from="1608658302044" duration="1345000" />
     </task>
     <servers />
   </component>
