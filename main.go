@@ -83,8 +83,9 @@ func createHttpHandler(logger *log.Entry, isGzipped bool, fileServer http.Handle
 			w.Header().Set("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
 			w.Header().Set("Access-Control-Allow-Headers", fmt.Sprintf("%s,%s", defaultCorsHeaders, flyHeaders))
 			logger.Printf("Serving Endpoint: %s", r.URL.Path)
-			ct := r.Header.Get("content-type")
-			if (r.ProtoMajor == 2 && strings.Contains(ct, "application/grpc")) || strings.Contains(r.URL.String(), "TkshService") {
+			// ct := r.Header.Get("content-type")
+			// if (r.ProtoMajor == 2 && strings.Contains(ct, "application/grpc")) || strings.Contains(r.URL.String(), "TkshService") {
+			if grpcWebServer.IsAcceptableGrpcCorsRequest(r) || grpcWebServer.IsGrpcWebRequest(r) || grpcWebServer.IsGrpcWebSocketRequest(r) {
 				grpcWebServer.ServeHTTP(w, r)
 			} else {
 				if isGzipped {

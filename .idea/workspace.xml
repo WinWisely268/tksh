@@ -2,44 +2,83 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="039d8b09-3fdb-472f-b0ad-5ccc89e326ee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/app/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/app/AppFooter.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/app/AppHeader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/app/AppHomeLayout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/app/AppLayout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/app/AppThemer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/app/DashboardBar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/app/DashboardLayout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/app/Home.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Loader/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Snackbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/ColumnHidePage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/DebugDump.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/FilterChipBar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/FilterPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/ResizeHandle.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/Table.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/TablePagination.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/TableStyles.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/TableToolbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/TooltipCell.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/filters/fuzzyFilter.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/filters/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/filters/numericFilter.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/Table/tableHookUtils.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/service-worker.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/shared/hooks/GetReports.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/shared/service/client.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pwa-frontend/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pwa-frontend/.eslintcache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pwa-frontend/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pwa-frontend/src/app/DashboardBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pwa-frontend/src/app/Home.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pwa-frontend/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pwa-frontend/src/service-worker.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pwa-frontend/src/serviceWorkerRegistration.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pwa-frontend/src/shared/hooks/GetReports.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/ios/Flutter/Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ios/Flutter/Debug.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/ios/Flutter/Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ios/Flutter/Release.xcconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/lib/rpc/tksh.pbgrpc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/lib/rpc/tksh.pbgrpc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/web/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generate.go" beforeDir="false" afterPath="$PROJECT_DIR$/generate.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/handlers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/.eslintcache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/.idea/react-frontend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/.idea/pwa-frontend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/public/logo192.png" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/public/logo192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/public/logo512.png" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/public/logo512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/public/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/app/AppFooter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/app/AppFooter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/app/AppHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/app/AppHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/app/AppHomeLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/app/AppHomeLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/app/AppLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/app/AppLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/app/AppThemer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/app/AppThemer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/app/DashboardBar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/app/DashboardLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/app/DashboardLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/app/Home.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/Loader/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/components/Loader/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/Snackbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/components/Snackbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/Table/ColumnHidePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/components/Table/ColumnHidePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/Table/DebugDump.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/components/Table/DebugDump.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/Table/FilterChipBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/components/Table/FilterChipBar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/Table/FilterPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/components/Table/FilterPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/Table/ResizeHandle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/components/Table/ResizeHandle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/Table/Table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/components/Table/Table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/Table/TablePagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/components/Table/TablePagination.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/Table/TableStyles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/components/Table/TableStyles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/Table/TableToolbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/components/Table/TableToolbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/Table/TooltipCell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/components/Table/TooltipCell.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/Table/filters/fuzzyFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/components/Table/filters/fuzzyFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/Table/filters/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/components/Table/filters/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/Table/filters/numericFilter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/components/Table/filters/numericFilter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/Table/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/components/Table/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/Table/tableHookUtils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/components/Table/tableHookUtils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/react-app-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/reportWebVitals.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/reportWebVitals.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/rpc/TkshServiceClientPb.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/rpc/TkshServiceClientPb.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/rpc/tksh_pb.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/rpc/tksh_pb.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/rpc/tksh_pb.js" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/rpc/tksh_pb.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/service-worker.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/setupTests.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/setupTests.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/shared/hooks/GetReports.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/shared/service/client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/shared/service/client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/shared/types/match-sorter.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/shared/types/match-sorter.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/shared/types/react-table-config.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/shared/types/react-table-config.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/shared/utilities/aggregators.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/shared/utilities/aggregators.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/shared/utilities/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/shared/utilities/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/shared/utilities/object.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/shared/utilities/object.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/shared/utilities/splitInitial.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/shared/utilities/splitInitial.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/shared/utilities/useDebounce.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/shared/utilities/useDebounce.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/shared/utilities/useLocalStorage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/shared/utilities/useLocalStorage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/shared/utilities/validators.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/shared/utilities/validators.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc/tksh.cobra.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/rpc/tksh.cobra.pb.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc/tksh.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/rpc/tksh.pb.go" afterDir="false" />
     </list>
@@ -55,7 +94,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file:///usr/local/Cellar/go/1.15.6/libexec" />
+  <component name="GOROOT" url="file:///usr/lib/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -77,10 +116,12 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/react-frontend" />
+    <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
     <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/react-frontend/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
@@ -104,11 +145,6 @@
       <setting name="fixLineNumbers" value="false" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="OPA_RUN_CONFIGURATION" factoryName="Opa configuration factory">
-      <option name="query" value="" />
-      <option name="addtionalargs" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="go build github.com/winwisely268/tksh" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="tksh" />
       <working_directory value="$PROJECT_DIR$" />
@@ -118,11 +154,6 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Go Build.go build github.com/winwisely268/tksh" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -133,11 +164,25 @@
       <option name="presentableId" value="Default" />
       <updated>1608545204931</updated>
       <workItem from="1608545205985" duration="28000" />
+      <workItem from="1608613762128" duration="466000" />
+      <workItem from="1608614235266" duration="338000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>

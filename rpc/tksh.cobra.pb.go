@@ -6,6 +6,7 @@ import (
 	client "github.com/getcouragenow/protoc-gen-cobra/client"
 	flag "github.com/getcouragenow/protoc-gen-cobra/flag"
 	iocodec "github.com/getcouragenow/protoc-gen-cobra/iocodec"
+	timestamp "github.com/golang/protobuf/ptypes/timestamp"
 	cobra "github.com/spf13/cobra"
 	grpc "google.golang.org/grpc"
 	proto "google.golang.org/protobuf/proto"
@@ -15,10 +16,9 @@ import (
 func TkshServiceClientCommand(options ...client.Option) *cobra.Command {
 	cfg := client.NewConfig(options...)
 	cmd := &cobra.Command{
-		Use:    cfg.CommandNamer("TkshService"),
-		Short:  "TkshService service client",
-		Long:   "",
-		Hidden: false,
+		Use:   cfg.CommandNamer("TkshService"),
+		Short: "TkshService service client",
+		Long:  "",
 	}
 	cfg.BindFlags(cmd.PersistentFlags())
 	cmd.AddCommand(
@@ -31,16 +31,16 @@ func TkshServiceClientCommand(options ...client.Option) *cobra.Command {
 
 func _TkshServiceNewTransferCommand(cfg *client.Config) *cobra.Command {
 	req := &NewTransferRecord{
+		Tanggal: &timestamp.Timestamp{},
 		UploadRequest: &FileUploadRequest{
 			FileInfo: &FileInfo{},
 		},
 	}
 
 	cmd := &cobra.Command{
-		Use:    cfg.CommandNamer("NewTransfer"),
-		Short:  "NewTransfer RPC client",
-		Long:   "hide",
-		Hidden: true,
+		Use:   cfg.CommandNamer("NewTransfer"),
+		Short: "NewTransfer RPC client",
+		Long:  "hide",
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if cfg.UseEnvVars {
 				if err := flag.SetFlagsFromEnv(cmd.Parent().PersistentFlags(), true, cfg.EnvVarNamer, cfg.EnvVarPrefix, "TkshService"); err != nil {
@@ -83,7 +83,8 @@ func _TkshServiceNewTransferCommand(cfg *client.Config) *cobra.Command {
 		},
 	}
 
-	flag.TimestampVar(cmd.PersistentFlags(), &req.Tanggal, cfg.FlagNamer("Tanggal"), "")
+	cmd.PersistentFlags().Int64Var(&req.Tanggal.Seconds, cfg.FlagNamer("Tanggal Seconds"), 0, "Represents seconds of UTC time since Unix epoch\n 1970-01-01T00:00:00Z. Must be from 0001-01-01T00:00:00Z to\n 9999-12-31T23:59:59Z inclusive.")
+	cmd.PersistentFlags().Int32Var(&req.Tanggal.Nanos, cfg.FlagNamer("Tanggal Nanos"), 0, "Non-negative fractions of a second at nanosecond resolution. Negative\n second values with fractions must still have non-negative nanos values\n that count forward in time. Must be from 0 to 999,999,999\n inclusive.")
 	cmd.PersistentFlags().Float64Var(&req.Transfer, cfg.FlagNamer("Transfer"), 0, "")
 	cmd.PersistentFlags().StringVar(&req.BuktiFilepath, cfg.FlagNamer("BuktiFilepath"), "", "")
 	cmd.PersistentFlags().StringVar(&req.UploadRequest.FileInfo.MimeType, cfg.FlagNamer("UploadRequest FileInfo MimeType"), "", "")
@@ -100,10 +101,9 @@ func _TkshServiceUpdateTransferCommand(cfg *client.Config) *cobra.Command {
 	}
 
 	cmd := &cobra.Command{
-		Use:    cfg.CommandNamer("UpdateTransfer"),
-		Short:  "UpdateTransfer RPC client",
-		Long:   "hide",
-		Hidden: true,
+		Use:   cfg.CommandNamer("UpdateTransfer"),
+		Short: "UpdateTransfer RPC client",
+		Long:  "hide",
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if cfg.UseEnvVars {
 				if err := flag.SetFlagsFromEnv(cmd.Parent().PersistentFlags(), true, cfg.EnvVarNamer, cfg.EnvVarPrefix, "TkshService"); err != nil {
@@ -159,10 +159,9 @@ func _TkshServiceGetReportCommand(cfg *client.Config) *cobra.Command {
 	req := &ReportRequest{}
 
 	cmd := &cobra.Command{
-		Use:    cfg.CommandNamer("GetReport"),
-		Short:  "GetReport RPC client",
-		Long:   "",
-		Hidden: false,
+		Use:   cfg.CommandNamer("GetReport"),
+		Short: "GetReport RPC client",
+		Long:  "",
 		RunE: func(cmd *cobra.Command, args []string) error {
 			if cfg.UseEnvVars {
 				if err := flag.SetFlagsFromEnv(cmd.Parent().PersistentFlags(), true, cfg.EnvVarNamer, cfg.EnvVarPrefix, "TkshService"); err != nil {

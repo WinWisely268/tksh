@@ -20,4 +20,4 @@ package main
 // Typescript / JS
 // ============================================================================
 //go:generate /usr/bin/env bash -c "echo 'generating protobuf and grpc service for typescript'"
-//go:generate protoc -I. -I./react-frontend/node_modules ./tksh.proto --js_out=import_style=commonjs,binary:./react-frontend/src/rpc --grpc-web_out=import_style=typescript,mode=grpcwebtext:./react-frontend/src/rpc
+//go:generate protoc -I. -I./pwa-frontend/node_modules ./tksh.proto --js_out=import_style=commonjs,binary:./pwa-frontend/src/rpc --grpc-web_out=import_style=typescript,mode=grpcwebtext:./pwa-frontend/src/rpc

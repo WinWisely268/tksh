@@ -13,13 +13,9 @@ import {
 function Copyright() {
   return (
     <Typography variant='body2' color='textSecondary' align='center'>
-      {'Perbaikan™ '}
-      <Link
-        color='inherit'
-        href='https://perbaikankaca.fly.dev'>
-          Perbaikan Kaca
+      <Link color='inherit' href='https://perbaikankaca.fly.dev'>
+          {'Perbaikan™ 2020'}
       </Link>{' '}
-      {new Date().getFullYear()}
     </Typography>
   )
 }
@@ -34,13 +30,13 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-export interface FooterProps { }
+export interface FooterProps {}
 
 const Footer: React.FunctionComponent<FooterProps> = () => {
   const classes = useStyles(useTheme())
   return (
     <footer className={classes.footer}>
-      <Container maxWidth='sm'>
+      <Container maxWidth='md'>
         <Copyright />
       </Container>
     </footer>

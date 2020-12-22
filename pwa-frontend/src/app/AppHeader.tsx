@@ -41,7 +41,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
                 >
                     <HomeIcon color="action"/>
                 </IconButton>
-                <div className={classes.spacer}></div>
+                <div className={classes.spacer}/>
             </Toolbar>
         </AppBar>
     )
