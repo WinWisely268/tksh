@@ -5,26 +5,26 @@ import { TableInstance } from 'react-table'
 const useStyles = makeStyles(
   createStyles({
     columnsPopOver: {
-      padding: 24,
+      padding: 24
     },
     popoverTitle: {
       fontWeight: 500,
       padding: '0 24px 24px 0',
-      textTransform: 'uppercase',
+      textTransform: 'uppercase'
     },
     grid: {
       display: 'grid',
       gridTemplateColumns: 'repeat(2, 198px)',
       '@media (max-width: 600px)': {
-        gridTemplateColumns: 'repeat(1, 160px)',
+        gridTemplateColumns: 'repeat(1, 160px)'
       },
       gridColumnGap: 6,
-      gridRowGap: 6,
-    },
+      gridRowGap: 6
+    }
   })
 )
 
-type ColumnHidePage<T extends object> = {
+type ColumnHidePageProps<T extends object> = {
   instance: TableInstance<T>
   anchorEl?: Element
   onClose: () => void
@@ -34,11 +34,11 @@ type ColumnHidePage<T extends object> = {
 const id = 'popover-column-hide'
 
 export function ColumnHidePage<T extends object>({
-  instance,
-  anchorEl,
-  onClose,
-  show,
-}: ColumnHidePage<T>): ReactElement | null {
+                                                   instance,
+                                                   anchorEl,
+                                                   onClose,
+                                                   show
+                                                 }: ColumnHidePageProps<T>): ReactElement | null {
   const classes = useStyles({})
   const { allColumns, toggleHideColumn } = instance
   const hideableColumns = allColumns.filter((column) => !(column.id === '_selector'))
@@ -56,11 +56,11 @@ export function ColumnHidePage<T extends object>({
         open={show}
         anchorOrigin={{
           vertical: 'bottom',
-          horizontal: 'right',
+          horizontal: 'right'
         }}
         transformOrigin={{
           vertical: 'top',
-          horizontal: 'right',
+          horizontal: 'right'
         }}
       >
         <div className={classes.columnsPopOver}>

@@ -1,5 +1,5 @@
 import React from 'react'
-import {useHistory} from 'react-router-dom'
+// import {useHistory} from 'react-router-dom'
 import {
     useTheme,
     createStyles,
@@ -7,8 +7,8 @@ import {
     Theme,
 } from '@material-ui/core/styles'
 
-import {Toolbar, AppBar, IconButton} from '@material-ui/core'
-import HomeIcon from '@material-ui/icons/Home'
+// import {Toolbar, AppBar, IconButton} from '@material-ui/core'
+import {Toolbar, AppBar} from '@material-ui/core'
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -27,20 +27,20 @@ export interface HeaderProps {
 
 const Header: React.FunctionComponent<HeaderProps> = () => {
     const classes = useStyles(useTheme())
-    const history = useHistory()
+    // const history = useHistory()
 
     return (
         <AppBar position="static" className={classes.appBar}>
             <Toolbar>
-                <IconButton
-                    edge="start"
-                    className={classes.menuButton}
-                    onClick={() => history.push('/')}
-                    color="inherit"
-                    aria-label="home"
-                >
-                    {/*<HomeIcon color="action"/>*/}
-                </IconButton>
+                {/*<IconButton*/}
+                {/*    edge="start"*/}
+                {/*    className={classes.menuButton}*/}
+                {/*    onClick={() => history.push('/')}*/}
+                {/*    color="inherit"*/}
+                {/*    aria-label="home"*/}
+                {/*>*/}
+                {/*    /!*<HomeIcon color="action"/>*!/*/}
+                {/*</IconButton>*/}
                 <div className={classes.spacer}/>
             </Toolbar>
         </AppBar>

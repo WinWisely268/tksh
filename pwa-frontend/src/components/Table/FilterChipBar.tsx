@@ -24,7 +24,7 @@ const useStyles = makeStyles(
   })
 )
 
-type FilterChipBar<T extends object> = {
+type FilterChipBarProps<T extends object> = {
   instance: TableInstance<T>
 }
 
@@ -38,7 +38,7 @@ const getFilterValue = (column: ColumnInstance<any>, filterValue: FilterValue) =
   return filterValue
 }
 
-export function FilterChipBar<T extends object>({ instance }: FilterChipBar<T>) {
+export function FilterChipBar<T extends object>({ instance }: FilterChipBarProps<T>) {
   const classes = useStyles({})
   const {
     allColumns,

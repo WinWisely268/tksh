@@ -37,14 +37,14 @@ const useStyles = makeStyles(
   })
 )
 
-type FilterPage<T extends object> = {
+type FilterPageProps<T extends object> = {
   instance: TableInstance<T>
   anchorEl?: Element
   onClose: () => void
   show: boolean
 }
 
-export function FilterPage<T extends object>({ instance, anchorEl, onClose, show }: FilterPage<T>): ReactElement {
+export function FilterPage<T extends object>({ instance, anchorEl, onClose, show }: FilterPageProps<T>): ReactElement {
   const classes = useStyles({})
   const { allColumns, setAllFilters } = instance
 
