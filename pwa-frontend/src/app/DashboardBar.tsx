@@ -59,15 +59,15 @@ const DashboardBar: React.FunctionComponent<DashboardBarProps> = ({
             Laporan Kaca Sentrum 2020
           </Typography>
           <div className={classes.actions}>
-            <IconButton
-              edge='start'
-              className={classes.menuButton}
-              onClick={() => history.push('/')}
-              color='inherit'
-              aria-label='home'
-            >
-              <HomeIcon />
-            </IconButton>
+            {/*<IconButton*/}
+            {/*  edge='start'*/}
+            {/*  className={classes.menuButton}*/}
+            {/*  onClick={() => history.push('/')}*/}
+            {/*  color='inherit'*/}
+            {/*  aria-label='home'*/}
+            {/*>*/}
+            {/*  /!*<HomeIcon />*!/*/}
+            {/*</IconButton>*/}
           </div>
         </Toolbar>
       </AppBar>

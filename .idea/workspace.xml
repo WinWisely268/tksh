@@ -3,36 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="039d8b09-3fdb-472f-b0ad-5ccc89e326ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/android/app/src/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/android/app/src/main/kotlin/com/example/kacasentrum/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/android/app/src/main/kotlin/com/example/kacasentrum/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/android/app/src/profile/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/android/app/src/profile/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/integration_test/app_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/integration_test/app_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/ios/Runner/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/lib/modules/repo/tksh_repo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/lib/modules/repo/tksh_repo.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/lib/modules/view/dashboard_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/lib/modules/view/dashboard_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/lib/modules/view_model/dashboard_view_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/lib/modules/view_model/dashboard_view_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/lib/rpc/tksh.pbgrpc.dart" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/lib/rpc/tksh.pbgrpc.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/lib/shared/repo/repo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/lib/shared/repo/repo.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/test/widget_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/web/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/web/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pwa-frontend/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pwa-frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pwa-frontend/src/app/AppHomeLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/app/AppHomeLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pwa-frontend/src/app/DashboardLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/app/DashboardLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwa-frontend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pwa-frontend/src/app/DashboardBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/app/DashboardBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pwa-frontend/src/app/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/app/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pwa-frontend/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pwa-frontend/src/rpc/tksh_pb.js" beforeDir="false" afterPath="$PROJECT_DIR$/pwa-frontend/src/rpc/tksh_pb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc/tksh.cobra.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/rpc/tksh.cobra.pb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc/tksh.pb.go" beforeDir="false" afterPath="$PROJECT_DIR$/rpc/tksh.pb.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,12 +71,25 @@
       <setting name="fixLineNumbers" value="false" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="OPA_TEST_RUN_CONFIGURATION" factoryName="Opa configuration factory">
+      <option name="addtionalargs" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="tksh" />
       <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$" />
+      <package value="github.com/winwisely268/tksh" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build github.com/winwisely268/tksh" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="tksh" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
       <package value="github.com/winwisely268/tksh" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
@@ -116,19 +103,6 @@
       <package value="github.com/winwisely268/tksh" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="OPA_TEST_RUN_CONFIGURATION" factoryName="Opa configuration factory">
-      <option name="addtionalargs" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build github.com/winwisely268/tksh" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="tksh" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/main.go" />
-      <package value="github.com/winwisely268/tksh" />
-      <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
   </component>

@@ -71,18 +71,19 @@ const Dashboard: React.FunctionComponent<DashboardTableProps> = () => {
         setErrMsg('tidak bisa mengambil data transfer')
       }
     })()
-  }, [allReports])
+  }, [])
 
   const columns = [
     {
       Header: 'Tanggal Transfer',
       accessor: 'tanggal',
-      fillter: 'fuzzyFilter'
+      filter: 'fuzzyFilter'
     },
     {
       Header: 'Jumlah Transfer',
       accessor: 'jumlah',
-      align: 'right'
+      align: 'right',
+      filter: 'fuzzyFilter'
     }
   ]
 
