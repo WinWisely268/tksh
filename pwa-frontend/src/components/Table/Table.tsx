@@ -59,8 +59,8 @@ const DefaultHeader: React.FC<HeaderProps<any>> = ({ column }) => (
 )
 
 function DefaultColumnFilter<T extends object>({
-  column: { id, index, filterValue, setFilter, render, parent }
-}: FilterProps<T>) {
+                                                 column: { id, index, filterValue, setFilter, render, parent }
+                                               }: FilterProps<T>) {
   const [value, setValue] = React.useState(filterValue || '')
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value)

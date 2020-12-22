@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, CssBaseline} from '@material-ui/core'
+import {CssBaseline} from '@material-ui/core'
 import DashboardBar from './DashboardBar'
 import {useHistory} from 'react-router-dom'
 import {

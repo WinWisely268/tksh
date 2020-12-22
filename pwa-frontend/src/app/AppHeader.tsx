@@ -31,18 +31,7 @@ const Header: React.FunctionComponent<HeaderProps> = () => {
 
     return (
         <AppBar position="static" className={classes.appBar}>
-            <Toolbar>
-                {/*<IconButton*/}
-                {/*    edge="start"*/}
-                {/*    className={classes.menuButton}*/}
-                {/*    onClick={() => history.push('/')}*/}
-                {/*    color="inherit"*/}
-                {/*    aria-label="home"*/}
-                {/*>*/}
-                {/*    /!*<HomeIcon color="action"/>*!/*/}
-                {/*</IconButton>*/}
-                <div className={classes.spacer}/>
-            </Toolbar>
+            <Toolbar />
         </AppBar>
     )
 }

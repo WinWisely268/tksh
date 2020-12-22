@@ -9,12 +9,12 @@ export interface AppProps {
 
 const App: React.FunctionComponent<AppProps> = () => {
   return (
-    <>
+    <div>
       <ServiceWorkerWrapper />
       <Switch>
         <Route exact path='/' component={Home} />
       </Switch>
-    </>
+    </div>
   )
 }
 

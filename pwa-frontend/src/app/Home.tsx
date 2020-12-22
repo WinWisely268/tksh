@@ -133,7 +133,7 @@ const Dashboard: React.FunctionComponent<DashboardTableProps> = () => {
   } else {
     const dashboardPage = () => (
       <React.Fragment>
-        <Grid item lg={12} xs={12}>
+        <Grid item xl={10} lg={10} sm={12} xs={12}>
           <Table
             name='Data Transfer'
             columns={columns}

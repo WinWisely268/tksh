@@ -101,7 +101,7 @@ const SnackBar: React.FunctionComponent<SnackBarProps> = ({
     const [open, setOpen] = useState(false)
 
     useEffect(() => {
-        setOpen(message === '' ? false : true)
+        setOpen(message !== '')
     }, [message])
 
     useEffect(() => {

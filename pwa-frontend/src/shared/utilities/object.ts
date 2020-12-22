@@ -2,6 +2,7 @@
 
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-restricted-syntax */
+
 /* eslint-disable guard-for-in */
 
 function camelToSnake(str: string) {
@@ -29,7 +30,7 @@ function camelToSnake(str: string) {
 
 function snakeToCamel(str: string) {
   const parts = str.split('_')
-  return parts.reduce(function (p, c) {
+  return parts.reduce(function(p, c) {
     return p + c.charAt(0).toUpperCase() + c.slice(1)
   }, parts.shift()!)
 }
