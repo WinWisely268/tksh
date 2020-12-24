@@ -37,7 +37,6 @@ import {
   useDebounce,
   useLocalStorage
 } from '../../shared/utilities'
-import { DumpInstance } from './DebugDump'
 import { FilterChipBar } from './FilterChipBar'
 import { fuzzyTextFilter, numericTextFilter } from './filters'
 import { ResizeHandle } from './ResizeHandle'

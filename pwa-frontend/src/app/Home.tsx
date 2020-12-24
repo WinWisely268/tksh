@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import {CircularProgress, Grid} from '@material-ui/core'
+import React, { useMemo, useState } from 'react'
+import { CircularProgress, Grid } from '@material-ui/core'
 import DashboardLayout from './DashboardLayout'
 import { Table } from '../components/Table'
 import SnackBar from '../components/Snackbar'
@@ -8,7 +8,8 @@ import { ReportRequest, TransferRecord } from '../rpc/tksh_pb'
 import Typography from '@material-ui/core/Typography'
 import dayjs from 'dayjs'
 
-export interface DashboardTableProps {}
+export interface DashboardTableProps {
+}
 
 function formatDate(dateInput: string): string {
   return dayjs(dateInput).format('DD-MMM-YYYY HH:mm:ss [WIB]')
@@ -38,9 +39,9 @@ function formatMoney(
       iString.substr(j).replace(/(\d{3})(?=\d)/g, '$1' + thousands) +
       (decimalCount
         ? decimal +
-          Math.abs(amount - i)
-            .toFixed(decimalCount)
-            .slice(2)
+        Math.abs(amount - i)
+          .toFixed(decimalCount)
+          .slice(2)
         : '')
     )
   } catch (e) {
@@ -54,7 +55,7 @@ const Dashboard: React.FunctionComponent<DashboardTableProps> = () => {
   const [allReports, setAllReports] = useState<TransferRecord[] | undefined>(
     undefined
   )
-  useEffect(() => {
+  useMemo(() => {
     ;(async () => {
       try {
         setLoading(true)
@@ -73,19 +74,20 @@ const Dashboard: React.FunctionComponent<DashboardTableProps> = () => {
     })()
   }, [])
 
-  const columns = [
-    {
-      Header: 'Tanggal Transfer',
-      accessor: 'tanggal',
-      filter: 'fuzzyFilter'
-    },
-    {
-      Header: 'Jumlah Transfer',
-      accessor: 'jumlah',
-      align: 'right',
-      filter: 'fuzzyFilter'
-    }
-  ]
+  const columns = useMemo(() => [
+      {
+        Header: 'Tanggal Transfer',
+        accessor: 'tanggal',
+        filter: 'fuzzyFilter'
+      },
+      {
+        Header: 'Jumlah Transfer',
+        accessor: 'jumlah',
+        align: 'right',
+        filter: 'fuzzyFilter'
+      }
+    ], []
+  )
 
   function mapListDataRow(): any[] {
     let transferRecord: any[] = []
@@ -113,11 +115,11 @@ const Dashboard: React.FunctionComponent<DashboardTableProps> = () => {
 
   if (isLoading && allReports === undefined) {
     return (
-        <React.Fragment>
-          <div style={{display: 'flex', justifyContent: 'center'}}>
-            <CircularProgress/>
-          </div>
-        </React.Fragment>
+      <React.Fragment>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <CircularProgress />
+        </div>
+      </React.Fragment>
     )
   }
   if (errMsg !== '') {
@@ -133,13 +135,15 @@ const Dashboard: React.FunctionComponent<DashboardTableProps> = () => {
   } else {
     const dashboardPage = () => (
       <React.Fragment>
-        <Grid item xl={10} lg={10} sm={12} xs={12}>
-          <Table
-            name='Data Transfer'
-            columns={columns}
-            data={mapListDataRow()}
-          />
-        </Grid>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <Grid item xl={10} lg={10} sm={12} xs={12}>
+            <Table
+              name='Data Transfer'
+              columns={columns}
+              data={mapListDataRow()}
+            />
+          </Grid>
+        </div>
         <Typography variant='h5' color='textSecondary' align='center'>
           Total Saldo: {getTotalSaldo()}
         </Typography>

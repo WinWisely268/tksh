@@ -1,11 +1,10 @@
-import React from 'react'
+import React, {lazy} from 'react'
 import { Route, Switch } from 'react-router-dom'
+const ServiceWorkerWrapper = lazy( () => import('../components/SWWrapper'))
 
-import Home from './Home'
-import ServiceWorkerWrapper from '../components/SWWrapper'
+const Home = lazy(() => import('./Home'))
 
-export interface AppProps {
-}
+export interface AppProps {}
 
 const App: React.FunctionComponent<AppProps> = () => {
   return (
